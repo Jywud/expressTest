@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= title %></title>
+
+    <% for(var i = 0; i < stylesheets.length; i++) { %>
+    <link rel="stylesheet" type="text/css" href="<%= stylesheets[i] %>">
+    <% } %>
+</head>
+<body>
+<div id="main">	
+	<h1>-----我是公用部分-----</h1>
+	<!--所有的子页面添加到body里面 -->
+    <%- body %>
+</div>
+
+<% for(var i = 0; i < scripts.length; i++) { %>
+<script src="<%= scripts[i] %>"></script>
+<% } %>
+
+</body>
+</html>
